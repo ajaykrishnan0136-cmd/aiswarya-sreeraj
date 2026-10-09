@@ -42,8 +42,9 @@ body{margin:0;background:#EADFC6;padding:12px}
 .ttl{font-family:'Great Vibes',cursive;font-size:38px;color:var(--mar);margin:0 0 10px;line-height:1}
 .kas{position:relative;height:14px;background:var(--cream);border-top:3px solid var(--gold);border-bottom:1px solid var(--gold)}
 .kas:after{content:'';position:absolute;left:0;right:0;top:3px;height:6px;background:conic-gradient(from 135deg at 50% 0,var(--gold) 90deg,transparent 0) 0 0/10px 6px}
-.rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
-.rv.in{opacity:1;transform:none}
+.rv{animation:rise .9s ease both}
+@supports (animation-timeline: view()){.rv{animation-timeline:view();animation-range:entry 0% entry 35%}}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 
 /* Countdown + muhurtham */
 .cd{display:flex;justify-content:center;gap:8px}
@@ -250,4 +251,134 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
       <div class="cc">
         <h3>Bride's side</h3>
         <div class="cr"><span>+91 94479 33839</span><span><a class="ib" href="tel:+919447933839" aria-label="Call"><i class="ti ti-phone"></i></a><a class="ib wa" href="https://wa.me/919447933839" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a></span></div>
-        <div class="cr"><span>+91 98866 43788</span><span><a class="ib" href="tel:+919886643788" aria-label="Call"><i class="ti ti-phone"></i></a><a class="ib wa" href="https://wa.me/919886643788" target="_blank" aria-l
+        <div class="cr"><span>+91 98866 43788</span><span><a class="ib" href="tel:+919886643788" aria-label="Call"><i class="ti ti-phone"></i></a><a class="ib wa" href="https://wa.me/919886643788" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a></span></div>
+      </div>
+      <div class="cc">
+        <h3>Groom's side</h3>
+        <div class="cr"><span>+91 74003 23390</span><span><a class="ib" href="tel:+917400323390" aria-label="Call"><i class="ti ti-phone"></i></a><a class="ib wa" href="https://wa.me/917400323390" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a></span></div>
+        <div class="cr"><span>+91 62823 96035</span><span><a class="ib" href="tel:+916282396035" aria-label="Call"><i class="ti ti-phone"></i></a><a class="ib wa" href="https://wa.me/916282396035" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--mard);padding:1.6rem 1rem;border-top:6px double var(--gold)">
+    <p class="scr" style="font-size:38px;margin:0;line-height:1"><span class="ini">A</span>iswarya &amp; <span class="ini">S</span>reeraj</p>
+    <p class="cap" style="margin-top:10px">18 – 22 November 2026</p>
+  </div>
+</div>
+<script>
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxCRSQHYcX1WeDkq6tpWQKhrbMU6fbvO4X-OlgnkinLOM7iM1AUxb60nyCqWDiivpwmgw/exec';
+const RSVP_NUMBERS = ['917592992906', '919400730472'];
+
+const dEl = document.getElementById('d'), hEl = document.getElementById('h'),
+      mEl = document.getElementById('m'), sEl = document.getElementById('s');
+const T = new Date('2026-11-20T10:00:00+05:30').getTime(), pad = v => String(v).padStart(2,'0');
+function tick() {
+  const x = Math.max(0, T - Date.now());
+  dEl.textContent = Math.floor(x / 864e5);
+  hEl.textContent = pad(Math.floor(x / 36e5) % 24);
+  mEl.textContent = pad(Math.floor(x / 6e4) % 60);
+  sEl.textContent = pad(Math.floor(x / 1e3) % 60);
+}
+tick(); setInterval(tick, 1000);
+
+const mg = document.getElementById('mg'), NS = 'http://www.w3.org/2000/svg';
+for (let i = 0; i < 24; i++) { const p = document.createElementNS(NS,'path'); p.setAttribute('d','M0,-42 C10,-60 10,-76 0,-86 C-10,-76 -10,-60 0,-42Z'); p.setAttribute('transform','rotate('+i*15+')'); mg.appendChild(p); }
+for (let i = 0; i < 12; i++) { const p = document.createElementNS(NS,'path'); p.setAttribute('d','M0,-22 C7,-30 7,-36 0,-40 C-7,-36 -7,-30 0,-22Z'); p.setAttribute('transform','rotate('+i*30+')'); mg.appendChild(p); }
+for (let i = 0; i < 48; i++) { const c = document.createElementNS(NS,'circle'); c.setAttribute('r','1.6'); c.setAttribute('cx',Math.sin(i*Math.PI/24)*92); c.setAttribute('cy',Math.cos(i*Math.PI/24)*92); mg.appendChild(c); }
+
+const toran = document.getElementById('toran');
+for (let i = 0; i < 18; i++) { const l = document.createElement('span'); l.style.animationDelay = (i * 0.17) + 's'; toran.appendChild(l); }
+
+const gars = document.getElementById('gars');
+for (let i = 0; i < 7; i++) {
+  const g = document.createElement('div'); g.className = 'gar'; g.style.animationDelay = (i * 0.3) + 's';
+  const beads = i % 2 ? 6 : 9;
+  for (let j = 0; j < beads; j++) { const b = document.createElement('i'); if (j === beads - 1) b.className = 'r'; else if (j % 3 === 2) b.className = 'o'; g.appendChild(b); }
+  gars.appendChild(g);
+}
+
+const LAMP = '<svg width="40" height="96" viewBox="0 0 40 96"><circle class="glow" cx="20" cy="15" r="13" fill="#FFD27A"/><g class="fl"><path d="M20 3 C26 13 25 21 20 24 C15 21 14 13 20 3Z" fill="#FF9F2E"/><path d="M20 11 C23 16 22 20 20 22 C18 20 17 16 20 11Z" fill="#FFF3B0"/></g><ellipse cx="20" cy="27" rx="15" ry="3.5" fill="#E9C46A" stroke="#8A6A1F" stroke-width=".8"/><path d="M6 27 Q20 37 34 27" fill="#C9A24B" stroke="#8A6A1F" stroke-width=".8"/><rect x="18" y="32" width="4" height="42" fill="#C9A24B"/><ellipse cx="20" cy="46" rx="5" ry="2" fill="#E9C46A"/><ellipse cx="20" cy="60" rx="4" ry="1.8" fill="#E9C46A"/><path d="M10 88 L14 74 L26 74 L30 88Z" fill="#C9A24B" stroke="#8A6A1F" stroke-width=".8"/><ellipse cx="20" cy="88" rx="12" ry="3" fill="#E9C46A" stroke="#8A6A1F" stroke-width=".8"/></svg>';
+document.querySelectorAll('.lamp').forEach(l => l.innerHTML = LAMP);
+
+const hero = document.getElementById('hero');
+const flowers = [{c:'#FFFDF5',j:1},{c:'#FFF8E7',j:1},{c:'#D7263D'},{c:'#F4A300'},{c:'#E9C46A'}];
+function shower(count) {
+  for (let i = 0; i < count; i++) {
+    const f = flowers[i % flowers.length], el = document.createElement('span');
+    el.className = 'pet';
+    if (f.j) { el.style.borderRadius = '50%'; el.style.width = '9px'; el.style.height = '9px'; }
+    el.style.left = Math.random()*100 + '%';
+    el.style.background = f.c;
+    el.style.animationDuration = (3 + Math.random()*3) + 's';
+    el.style.animationDelay = (Math.random()*1.5) + 's';
+    hero.appendChild(el);
+    setTimeout(() => el.remove(), 7000);
+  }
+}
+shower(22);
+
+const seal = document.getElementById('seal'), hint = document.getElementById('hint');
+seal.onclick = () => {
+  seal.classList.toggle('on');
+  hint.textContent = seal.classList.contains('on') ? 'Welcome to our celebration' : 'Tap the seal';
+  shower(45);
+};
+
+document.querySelectorAll('.gal').forEach(g => {
+  for (let i = 1; i <= +g.dataset.n; i++) {
+    const img = document.createElement('img');
+    img.src = g.dataset.p + '-' + i + '.jpg'; img.alt = 'Style inspiration'; img.loading = 'lazy';
+    img.onerror = () => img.remove();
+    g.appendChild(img);
+  }
+});
+window.addEventListener('load', () => {
+  document.querySelectorAll('.gw').forEach(w => { if (!w.querySelector('img')) w.style.display = 'none'; });
+});
+
+fetch('sangeet.pdf', {method: 'HEAD'}).then(r => { if (!r.ok) document.getElementById('pdfbtn').style.display = 'none'; })
+  .catch(() => document.getElementById('pdfbtn').style.display = 'none');
+
+let choice = '';
+const yesBtn = document.getElementById('yes'), noBtn = document.getElementById('no'),
+      err = document.getElementById('err'), nm = document.getElementById('nm'),
+      cwrap = document.getElementById('cwrap'), cnt = document.getElementById('cnt');
+[yesBtn, noBtn].forEach(b => b.onclick = () => {
+  choice = b.id;
+  yesBtn.classList.toggle('sel', b === yesBtn);
+  noBtn.classList.toggle('sel', b === noBtn);
+  cwrap.style.display = choice === 'yes' ? 'block' : 'none';
+  err.textContent = '';
+});
+nm.oninput = () => err.textContent = '';
+
+document.getElementById('send').onclick = () => {
+  const name = nm.value.trim();
+  if (!name) { err.textContent = 'Enter your name first'; return; }
+  if (!choice) { err.textContent = 'Choose attending or not'; return; }
+  const guests = choice === 'yes' ? cnt.value : '0';
+
+  if (SHEET_URL) {
+    fetch(SHEET_URL, {
+      method: 'POST', mode: 'no-cors', keepalive: true,
+      body: new URLSearchParams({ name, response: choice === 'yes' ? 'Attending' : 'Not attending', guests })
+    }).catch(() => {});
+  }
+
+  const msg = choice === 'yes'
+    ? `Hi Aiswarya & Sreeraj! This is ${name}. Joyfully attending your wedding on 20 November 🎉 (${guests} ${guests === '1' ? 'person' : 'people'})`
+    : `Hi Aiswarya & Sreeraj! This is ${name}. Sorry I can't make it, but sending all my blessings 💛`;
+  document.getElementById('wa1').href = 'https://wa.me/' + RSVP_NUMBERS[0] + '?text=' + encodeURIComponent(msg);
+  document.getElementById('wa2').href = 'https://wa.me/' + RSVP_NUMBERS[1] + '?text=' + encodeURIComponent(msg);
+
+  document.getElementById('form').style.display = 'none';
+  document.getElementById('done').style.display = 'block';
+  document.getElementById('thanks').textContent = choice === 'yes'
+    ? 'Thank you, ' + name + '!'
+    : 'Thank you for your blessings, ' + name;
+  shower(30);
+};
+</script>
+</body>
+</html>
