@@ -12,8 +12,6 @@
 :root{--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mar:#5B0F1A;--mard:#3E0A12;--gold:#C9A24B;--gold2:#E9C46A;--gold3:#F3E1A8;--cream:#FBF5E6;--ivory:#FFFCF3;--ink:#2E1A12;--txt:#4A3B2E;--leaf:#2F6B2F;--dk:#8A6A1F}
 body{margin:0;background:#EADFC6;padding:12px}
 .w{max-width:480px;margin:0 auto;background:var(--cream);border-radius:18px;color:var(--ink);font-family:'Cormorant Garamond',serif;text-align:center;overflow:hidden;border:2px solid var(--gold)}
-
-/* Hero */
 .hero{position:relative;background:var(--mard);padding:6.2rem 1rem 2.2rem;overflow:hidden;border-bottom:6px double var(--gold)}
 .mand{position:absolute;left:50%;top:55%;width:520px;height:520px;margin:-260px 0 0 -260px;opacity:.2;animation:spin 90s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -33,8 +31,6 @@ body{margin:0;background:#EADFC6;padding:12px}
 .seal.on{animation:none;transform:rotate(360deg) scale(.9)}
 .pet{position:absolute;top:-20px;width:11px;height:15px;border-radius:12px 0 12px 0;pointer-events:none;z-index:4;animation:fall linear forwards}
 @keyframes fall{to{transform:translateY(620px) rotate(540deg);opacity:.2}}
-
-/* Sections */
 .sec{padding:2rem 1.25rem}
 .orn{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 14px}
 .orn i{display:block;width:46px;height:1px;background:var(--gold)}
@@ -45,8 +41,6 @@ body{margin:0;background:#EADFC6;padding:12px}
 .rv{animation:rise .9s ease both}
 @supports (animation-timeline: view()){.rv{animation-timeline:view();animation-range:entry 0% entry 35%}}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-
-/* Countdown + muhurtham */
 .cd{display:flex;justify-content:center;gap:8px}
 .cd div{width:70px;height:70px;border-radius:50%;border:1px solid var(--gold);outline:3px double #E3CC8F;outline-offset:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--ivory)}
 .cd b{font-size:26px;font-weight:500;line-height:1;color:var(--mar)}.cd span{font-family:var(--sans);font-size:10px;letter-spacing:.1em;color:var(--dk)}
@@ -58,8 +52,6 @@ body{margin:0;background:#EADFC6;padding:12px}
 .fl{transform-box:fill-box;transform-origin:50% 100%;animation:flk .8s ease-in-out infinite alternate}
 @keyframes flk{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.9,1.15) rotate(3deg)}}
 .glow{animation:gl 1.6s ease-in-out infinite alternate}@keyframes gl{from{opacity:.15}to{opacity:.5}}
-
-/* Timeline */
 .tl{position:relative;text-align:left;padding-left:30px;margin-top:8px}
 .tl:before{content:'';position:absolute;left:10px;top:6px;bottom:6px;width:1px;background:var(--gold)}
 .ev{position:relative;padding:12px 14px;margin-bottom:14px;border-radius:12px;background:var(--ivory);border:0.5px solid #E3CC8F}
@@ -71,27 +63,9 @@ body{margin:0;background:#EADFC6;padding:12px}
 .ev .tg{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:var(--dk)}
 .ev a{font-family:var(--sans);font-size:13px;color:var(--dk);text-decoration:none;border-bottom:0.5px solid var(--gold)}
 .ev.main h3,.ev.main p{color:var(--gold3)}.ev.main .d,.ev.main a{color:var(--gold2)}
-
-/* Dress code */
-.dc{background:var(--ivory);border:1px solid #E3CC8F;border-radius:14px;padding:16px 14px;margin-bottom:16px}
-.dc h3{font-size:24px;font-weight:600;margin:0;color:var(--mar)}
-.dc .t{font-family:var(--sans);font-size:11px;letter-spacing:.14em;color:var(--dk);margin:6px 0 4px;text-transform:uppercase}
-.dc p{font-family:var(--sans);font-size:13px;line-height:1.55;color:var(--txt);margin:8px 0 0}
-.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin:10px 0 14px}
-.pill.av{background:#9B1C1C;color:#fff}.pill.ok{background:var(--leaf);color:#fff}
-.sw{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
-.sw div{width:62px;font-family:var(--sans);font-size:12px;font-weight:600;color:var(--ink)}
-.sw span{position:relative;display:block;width:46px;height:46px;border-radius:50%;margin:0 auto 4px;border:1px solid #D9C89A;overflow:hidden}
-.sw.no span{border:2px solid #9B1C1C}
-.sw.no span:after{content:'';position:absolute;left:-8px;top:20px;width:62px;height:3px;background:#9B1C1C;transform:rotate(-45deg)}
-.dc .avt{font-size:14px;font-weight:700;color:#7A1414}
-.dc .note{background:#FFF1D6;border:1px dashed var(--gold);border-radius:10px;padding:8px 10px;font-weight:700;color:var(--mar);margin-top:12px}
-.gt{font-family:'Great Vibes',cursive;font-size:28px;color:var(--mar);margin:16px 0 0;line-height:1}
-.gl{font-family:var(--sans);font-size:11px;letter-spacing:.2em;color:var(--dk);text-transform:uppercase;margin:12px 0 6px}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.gal img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px;border:1px solid #E3CC8F;display:block}
-
-/* Contacts */
+.cg{background:var(--ivory);border:1px solid var(--gold);border-radius:14px;padding:22px 16px;outline:3px double #E3CC8F;outline-offset:3px;margin:4px}
+.cg .hl{font-size:22px;font-weight:600;color:var(--mar);margin:16px 0 18px}
+.bt{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .ct{display:grid;gap:12px;text-align:left}
 .cc{background:var(--ivory);border:1px solid #E3CC8F;border-radius:14px;padding:14px 16px}
 .cc h3{font-size:22px;font-weight:600;margin:0 0 6px;color:var(--mar)}
@@ -99,9 +73,8 @@ body{margin:0;background:#EADFC6;padding:12px}
 .cr:first-of-type{border-top:0}
 .ib{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--mar);color:var(--gold3);text-decoration:none;font-size:18px;margin-left:6px}
 .ib.wa{background:#1F7A3E;color:#fff}
-
-/* Buttons + form */
 .gbtn{display:inline-flex;align-items:center;gap:8px;background:var(--mar);color:var(--gold3);border:1px solid var(--gold);border-radius:999px;padding:10px 20px;font-family:var(--sans);font-size:13px;text-decoration:none;cursor:pointer}
+.gbtn.ol{background:var(--ivory);color:var(--mar)}
 .gbtn.wa{background:#1F7A3E;color:#fff;border-color:#1F7A3E;margin:4px}
 button{font-family:var(--sans);font-size:13px;color:var(--mar);border:1px solid var(--gold);background:var(--ivory);border-radius:999px;padding:9px 14px;cursor:pointer}
 button.sel{background:var(--mar);color:var(--gold3)}
@@ -163,52 +136,17 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
   </div>
   <div class="kas"></div>
 
-  <div class="sec">
+  <div class="sec rv">
     <div class="orn"><i></i><b></b><i></i></div>
     <p class="ttl">Dress code</p>
-    <p style="margin:0 0 16px;font-size:18px;font-style:italic">A little colour guide for each celebration</p>
-
-    <div class="dc rv">
-      <h3>Dakshina</h3><p class="t">Simple · elegant · traditional</p>
-      <span class="pill ok"><i class="ti ti-check"></i>Please wear</span>
-      <div class="sw"><div><span style="background:#F6EEDC"></span>Cream</div><div><span style="background:#C9A24B"></span>Kasavu gold</div></div>
-      <p>Plain Kerala kasavu only, with no prints or colours. Kasavu saree, skirt and blouse or a light kurta for women, and kurta or shirt with mundu for men. Minimal jewellery.</p>
-      <p class="note"><i class="ti ti-crown"></i> Davani / half saree is reserved for the bride.</p>
-      <div class="gw"><p class="gt">Style inspo</p><div class="gal" data-p="dakshina" data-n="6"></div></div>
-    </div>
-
-    <div class="dc rv">
-      <h3>Sangeeth</h3><p class="t">The eve before the wedding</p>
-      <span class="pill ok"><i class="ti ti-palette"></i>Our colour palette</span>
-      <div class="sw"><div><span style="background:#1B5560"></span>Deep teal</div><div><span style="background:#E8A33A"></span>Mustard yellow</div><div><span style="background:#5C1A5B"></span>Plum / deep purple</div></div>
-      <p>Skip heavy prints and embellishments. Slide into something solid, something you can dance in! For men, a solid kurta with white or cream pants or dhoti is perfect.</p>
-      <p class="note"><i class="ti ti-crown"></i> Lehenga is reserved for the bride.</p>
-      <div class="gw"><p class="gt">Style inspo</p><p>Stylish and minimal. Borrow the style, but stick to our colour palette.</p>
-        <div class="gw"><p class="gl">For her</p><div class="gal" data-p="sangeet-women" data-n="9"></div></div>
-        <div class="gw"><p class="gl">For him</p><div class="gal" data-p="sangeet-men" data-n="6"></div></div>
+    <div class="cg">
+      <p style="margin:0;font-size:19px;line-height:1.6">To make our celebrations even more beautiful, we've put together a little colour guide for each function. Tap the link for the details.</p>
+      <p class="hl">A little colour coordination, a lot of celebration! 🎉</p>
+      <div class="bt">
+        <a class="gbtn" href="colour-guide.pdf" target="_blank"><i class="ti ti-file-type-pdf"></i>Open colour guide</a>
+        <a class="gbtn ol" href="colour-guide.pdf" download><i class="ti ti-download"></i>Download PDF</a>
       </div>
-      <a class="gbtn" id="pdfbtn" href="sangeet.pdf" target="_blank" style="margin-top:14px"><i class="ti ti-file-type-pdf"></i>View Sangeeth style guide</a>
-    </div>
-
-    <div class="dc rv">
-      <h3>Kalyanam</h3>
-      <span class="pill av"><i class="ti ti-alert-triangle"></i>Please avoid</span>
-      <div class="sw no"><div><span style="background:#C8102E"></span>Red</div><div><span style="background:#7A1F2B"></span>Maroon</div><div><span style="background:#E8801A"></span>Orange</div><div><span style="background:#C2185B"></span>Pink</div><div><span style="background:#FAF6EC"></span>Ivory</div><div><span style="background:#C9A24B"></span>Full gold</div></div>
-      <p class="avt">These shades are for the bride and groom. Every other colour is welcome.</p>
-    </div>
-
-    <div class="dc rv">
-      <h3>Reception · Vadakara</h3>
-      <span class="pill av"><i class="ti ti-alert-triangle"></i>Please avoid</span>
-      <div class="sw no"><div><span style="background:#3E7D3E"></span>Green</div><div><span style="background:#222"></span>Black</div></div>
-      <p class="avt">Any shade of green or black. All other colours are welcome.</p>
-    </div>
-
-    <div class="dc rv" style="margin-bottom:0">
-      <h3>Reception · Thiruvalla</h3>
-      <span class="pill av"><i class="ti ti-alert-triangle"></i>Please avoid</span>
-      <div class="sw no"><div><span style="background:#222"></span>Black</div><div><span style="background:#D4A843"></span>Gold</div></div>
-      <p class="avt">Any shade of black or gold. All other colours are welcome.</p>
+      <p style="margin:18px 0 0;font-size:18px;font-style:italic;color:var(--dk)">Thank you for dressing up with us! 🤍</p>
     </div>
   </div>
   <div class="kas"></div>
@@ -325,21 +263,6 @@ seal.onclick = () => {
   shower(45);
 };
 
-document.querySelectorAll('.gal').forEach(g => {
-  for (let i = 1; i <= +g.dataset.n; i++) {
-    const img = document.createElement('img');
-    img.src = g.dataset.p + '-' + i + '.jpg'; img.alt = 'Style inspiration'; img.loading = 'lazy';
-    img.onerror = () => img.remove();
-    g.appendChild(img);
-  }
-});
-window.addEventListener('load', () => {
-  document.querySelectorAll('.gw').forEach(w => { if (!w.querySelector('img')) w.style.display = 'none'; });
-});
-
-fetch('sangeet.pdf', {method: 'HEAD'}).then(r => { if (!r.ok) document.getElementById('pdfbtn').style.display = 'none'; })
-  .catch(() => document.getElementById('pdfbtn').style.display = 'none');
-
 let choice = '';
 const yesBtn = document.getElementById('yes'), noBtn = document.getElementById('no'),
       err = document.getElementById('err'), nm = document.getElementById('nm'),
@@ -359,12 +282,10 @@ document.getElementById('send').onclick = () => {
   if (!choice) { err.textContent = 'Choose attending or not'; return; }
   const guests = choice === 'yes' ? cnt.value : '0';
 
-  if (SHEET_URL) {
-    fetch(SHEET_URL, {
-      method: 'POST', mode: 'no-cors', keepalive: true,
-      body: new URLSearchParams({ name, response: choice === 'yes' ? 'Attending' : 'Not attending', guests })
-    }).catch(() => {});
-  }
+  fetch(SHEET_URL, {
+    method: 'POST', mode: 'no-cors', keepalive: true,
+    body: new URLSearchParams({ name, response: choice === 'yes' ? 'Attending' : 'Not attending', guests })
+  }).catch(() => {});
 
   const msg = choice === 'yes'
     ? `Hi Aiswarya & Sreeraj! This is ${name}. Joyfully attending your wedding on 20 November 🎉 (${guests} ${guests === '1' ? 'person' : 'people'})`
