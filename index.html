@@ -19,11 +19,6 @@ body{margin:0;background:#EADFC6;padding:12px}
 .hero p{text-shadow:0 1px 8px rgba(0,0,0,.65)}
 .hero .nm{text-shadow:none;filter:drop-shadow(0 2px 6px rgba(0,0,0,.7))}
 .toran{position:absolute;top:0;left:0;right:0;height:12px;z-index:2;border-top:3px solid var(--gold);background:radial-gradient(circle at 50% 2px,var(--gold2) 3px,transparent 3.6px) 0 0/18px 12px}
-.gars{position:absolute;top:6px;left:0;right:0;display:flex;justify-content:space-around;padding:0 10px;z-index:1}
-.gar{display:flex;flex-direction:column;align-items:center;transform-origin:top center;animation:sway 3.6s ease-in-out infinite alternate}
-.gar i{display:block;width:8px;height:8px;border-radius:50%;background:#FFFDF5;margin-top:1px}
-.gar i.o{background:#F28C28}.gar i.r{background:#C2185B;width:10px;height:10px}
-@keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
 .ml{font-family:'Noto Serif Malayalam',serif;font-weight:800;color:var(--gold2);font-size:28px;margin:0 0 6px;letter-spacing:.02em}
 .scr{font-family:'Great Vibes',cursive;color:var(--gold2);font-weight:400}
 .nm{font-family:'Pinyon Script',cursive;font-weight:400;background:linear-gradient(180deg,#FBEBB5 0%,#E9C46A 50%,#C9A24B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .2em}
@@ -93,7 +88,6 @@ textarea{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);b
   <div class="hero" id="hero">
     <div class="bg"></div>
     <div class="toran"></div>
-    <div class="gars" id="gars"></div>
     <div style="position:relative;z-index:3">
       <p class="ml">ശുഭവിവാഹം</p>
       <p class="cap" style="color:var(--gold2);font-weight:600">Shubha vivaham</p>
@@ -245,14 +239,6 @@ function tick() {
   sEl.textContent = pad(Math.floor(x / 1e3) % 60);
 }
 tick(); setInterval(tick, 1000);
-
-const gars = document.getElementById('gars');
-for (let i = 0; i < 7; i++) {
-  const g = document.createElement('div'); g.className = 'gar'; g.style.animationDelay = (i * 0.3) + 's';
-  const beads = i % 2 ? 6 : 9;
-  for (let j = 0; j < beads; j++) { const b = document.createElement('i'); if (j === beads - 1) b.className = 'r'; else if (j % 3 === 2) b.className = 'o'; g.appendChild(b); }
-  gars.appendChild(g);
-}
 
 const LAMP = '<svg width="40" height="96" viewBox="0 0 40 96"><circle class="glow" cx="20" cy="15" r="13" fill="#FFD27A"/><g class="fl"><path d="M20 3 C26 13 25 21 20 24 C15 21 14 13 20 3Z" fill="#FF9F2E"/><path d="M20 11 C23 16 22 20 20 22 C18 20 17 16 20 11Z" fill="#FFF3B0"/></g><ellipse cx="20" cy="27" rx="15" ry="3.5" fill="#E9C46A" stroke="#8A6A1F" stroke-width=".8"/><path d="M6 27 Q20 37 34 27" fill="#C9A24B" stroke="#8A6A1F" stroke-width=".8"/><rect x="18" y="32" width="4" height="42" fill="#C9A24B"/><ellipse cx="20" cy="46" rx="5" ry="2" fill="#E9C46A"/><ellipse cx="20" cy="60" rx="4" ry="1.8" fill="#E9C46A"/><path d="M10 88 L14 74 L26 74 L30 88Z" fill="#C9A24B" stroke="#8A6A1F" stroke-width=".8"/><ellipse cx="20" cy="88" rx="12" ry="3" fill="#E9C46A" stroke="#8A6A1F" stroke-width=".8"/></svg>';
 document.querySelectorAll('.lamp').forEach(l => l.innerHTML = LAMP);
