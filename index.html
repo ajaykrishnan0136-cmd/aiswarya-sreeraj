@@ -24,9 +24,9 @@ body{margin:0;background:#EADFC6;padding:12px}
 @keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
 .ml{font-family:'Noto Serif Malayalam',serif;color:var(--gold2);font-size:20px;margin:0 0 6px}
 .scr{font-family:'Great Vibes',cursive;color:var(--gold2);font-weight:400}
-.ini{font-size:1.3em;color:#F6D67E}
+.ini{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:.82em;color:#F6D67E;letter-spacing:.02em;margin-right:2px}
 .cap{font-family:var(--sans);font-size:11px;letter-spacing:.32em;color:var(--gold);margin:0;text-transform:uppercase}
-.seal{position:relative;width:92px;height:92px;border-radius:50%;background:var(--gold);color:var(--mard);border:4px double var(--gold3);display:flex;align-items:center;justify-content:center;margin:0 auto;font-family:'Great Vibes',cursive;font-size:36px;cursor:pointer;transition:transform .8s;animation:pulse 2.4s ease-in-out infinite}
+.seal{position:relative;width:92px;height:92px;border-radius:50%;background:var(--gold);color:var(--mard);border:4px double var(--gold3);display:flex;align-items:center;justify-content:center;margin:0 auto;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:28px;letter-spacing:.04em;cursor:pointer;transition:transform .8s;animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{50%{transform:scale(1.06)}}
 .seal.on{animation:none;transform:rotate(360deg) scale(.9)}
 .pet{position:absolute;top:-20px;width:11px;height:15px;border-radius:12px 0 12px 0;pointer-events:none;z-index:4;animation:fall linear forwards}
@@ -46,7 +46,7 @@ body{margin:0;background:#EADFC6;padding:12px}
 .cd b{font-size:26px;font-weight:500;line-height:1;color:var(--mar)}.cd span{font-family:var(--sans);font-size:10px;letter-spacing:.1em;color:var(--dk)}
 .muh{display:flex;align-items:flex-end;justify-content:center;gap:12px;margin:28px 4px 0;padding:18px 8px 14px;border:1px solid var(--gold);border-radius:14px;background:var(--ivory);outline:3px double #E3CC8F;outline-offset:3px}
 .muh .lb{font-family:var(--sans);font-size:11px;letter-spacing:.28em;color:var(--dk);margin:0;text-transform:uppercase}
-.muh .tm{font-size:50px;font-weight:600;color:var(--mar);margin:4px 0;line-height:1}
+.muh .tm{font-size:36px;white-space:nowrap;font-weight:600;color:var(--mar);margin:4px 0;line-height:1}
 .muh .dt{font-family:var(--sans);font-size:12px;letter-spacing:.1em;color:var(--txt);margin:0}
 .lamp svg{display:block}
 .fl{transform-box:fill-box;transform-origin:50% 100%;animation:flk .8s ease-in-out infinite alternate}
@@ -80,6 +80,10 @@ button{font-family:var(--sans);font-size:13px;color:var(--mar);border:1px solid 
 button.sel{background:var(--mar);color:var(--gold3)}
 input{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);border-radius:999px;width:100%;box-sizing:border-box;text-align:center;font-family:'Cormorant Garamond',serif;font-size:18px;padding:8px}
 select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);border-radius:999px;padding:8px 16px;font-family:var(--sans);font-size:14px}
+textarea{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);border-radius:16px;width:100%;box-sizing:border-box;font-family:'Cormorant Garamond',serif;font-size:18px;padding:10px 14px;resize:vertical;min-height:90px}
+.wcard{background:var(--ivory);border:1px solid #E3CC8F;border-radius:14px;padding:14px 16px;margin-top:14px;text-align:left}
+.wcard p{margin:0;font-size:18px;font-style:italic;line-height:1.5}
+.wcard b{display:block;margin-top:6px;font-family:var(--sans);font-size:12px;letter-spacing:.12em;color:var(--dk);font-weight:500;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -109,7 +113,7 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
     <div class="cd"><div><b id="d">--</b><span>DAYS</span></div><div><b id="h">--</b><span>HRS</span></div><div><b id="m">--</b><span>MIN</span></div><div><b id="s">--</b><span>SEC</span></div></div>
     <div class="muh">
       <span class="lamp"></span>
-      <div><p class="lb">Shubha muhurtham</p><p class="tm">10:00 AM</p><p class="dt">Friday · 20 November 2026</p></div>
+      <div><p class="lb">Shubha muhurtham</p><p class="tm">10:00 – 10:30<span style="font-size:.5em"> AM</span></p><p class="dt">Friday · 20 November 2026</p></div>
       <span class="lamp"></span>
     </div>
   </div>
@@ -129,7 +133,7 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
     <div class="tl">
       <div class="ev"><p class="d">WED · 18 NOV</p><h3>Dakshina</h3><p>11:00 AM – 1:00 PM</p><p>At home</p><a href="https://maps.app.goo.gl/g1XfBNQQNNe9SEWSA" target="_blank">Directions ↗</a></div>
       <div class="ev"><p class="d">THU · 19 NOV</p><h3>Sangeeth</h3><p class="tg">The eve before the wedding · bring your game and moves</p><p>5:00 PM – 9:00 PM</p><p>Staydium Bungalow Resort, Kozhikode</p><a href="https://share.google/DTjAYLmf6D6758Wmc" target="_blank">Directions ↗</a></div>
-      <div class="ev main"><p class="d">FRI · 20 NOV · THE BIG DAY</p><h3>Kalyanam</h3><p>Muhurtham 10:00 AM</p><p>Staydium Bungalow Resort, Kozhikode</p><a href="https://share.google/DTjAYLmf6D6758Wmc" target="_blank">Directions ↗</a></div>
+      <div class="ev main"><p class="d">FRI · 20 NOV · THE BIG DAY</p><h3>Kalyanam</h3><p>Muhurtham 10:00 – 10:30 AM</p><p>Staydium Bungalow Resort, Kozhikode</p><a href="https://share.google/DTjAYLmf6D6758Wmc" target="_blank">Directions ↗</a></div>
       <div class="ev"><p class="d">FRI · 20 NOV</p><h3>Reception · Vadakara</h3><p>5:30 PM – 9:00 PM</p><p>Sargalaya Kerala Arts and Crafts Village, Iringal</p><a href="https://share.google/DyXwPDMz3KMXl1zxf" target="_blank">Directions ↗</a></div>
       <div class="ev"><p class="d">SUN · 22 NOV</p><h3>Reception · Thiruvalla</h3><p>5:30 PM – 9:00 PM</p><p>St. John's Malankara Syrian Catholic Metropolitan Cathedral, Thiruvalla</p><a href="https://maps.app.goo.gl/A5RBkxtb6eifcW277" target="_blank">Directions ↗</a></div>
     </div>
@@ -159,7 +163,6 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
     <a class="gbtn" href="https://share.google/DTjAYLmf6D6758Wmc" target="_blank"><i class="ti ti-navigation"></i>Open in Google Maps</a>
   </div>
   <div class="kas"></div>
-
   <div class="sec rv">
     <div class="orn"><i></i><b></b><i></i></div>
     <p class="ttl">Will you join us?</p>
@@ -178,6 +181,26 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
       <p style="font-family:var(--sans);font-size:13px;color:var(--txt);margin:0 0 10px">Your reply is saved. You can also let us know on WhatsApp:</p>
       <a id="wa1" class="gbtn wa" target="_blank"><i class="ti ti-brand-whatsapp"></i>75929 92906</a>
       <a id="wa2" class="gbtn wa" target="_blank"><i class="ti ti-brand-whatsapp"></i>94007 30472</a>
+    </div>
+  </div>
+  <div class="kas"></div>
+
+  <div class="sec rv">
+    <div class="orn"><i></i><b></b><i></i></div>
+    <p class="ttl">Shower your blessings</p>
+    <p style="margin:0 0 14px;font-size:19px;line-height:1.5">Leave a few words for Aiswarya &amp; Sreeraj.<br>They'll treasure every one. 🤍</p>
+    <div id="wform">
+      <input id="wnm" placeholder="Your name" style="margin-bottom:10px">
+      <textarea id="wmsg" placeholder="Your wishes for the couple…" maxlength="400"></textarea>
+      <p id="werr" style="font-family:var(--sans);font-size:13px;color:#A32D2D;margin:8px 0;min-height:1px"></p>
+      <button id="wsend" class="gbtn"><i class="ti ti-heart"></i>Send wishes</button>
+    </div>
+    <div id="wdone" style="display:none">
+      <p class="scr" style="font-size:30px;color:var(--mar);margin:6px 0 4px">Thank you!</p>
+      <div class="wcard"><p id="wtxt"></p><b id="wby"></b></div>
+      <p style="font-family:var(--sans);font-size:13px;color:var(--txt);margin:14px 0 8px">Your wish is saved. You can also send it on WhatsApp:</p>
+      <a id="ww1" class="gbtn wa" target="_blank"><i class="ti ti-brand-whatsapp"></i>75929 92906</a>
+      <a id="ww2" class="gbtn wa" target="_blank"><i class="ti ti-brand-whatsapp"></i>94007 30472</a>
     </div>
   </div>
   <div class="kas"></div>
@@ -205,7 +228,7 @@ select{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);bor
   </div>
 </div>
 <script>
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxCRSQHYcX1WeDkq6tpWQKhrbMU6fbvO4X-OlgnkinLOM7iM1AUxb60nyCqWDiivpwmgw/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw3io0m7u86SQUJ8jLjc1njrMZoZsQx9XRbUsm35WAdZMOIJv5QAWR6fIGl_2Id47ZwAQ/exec';
 const RSVP_NUMBERS = ['917592992906', '919400730472'];
 
 const dEl = document.getElementById('d'), hEl = document.getElementById('h'),
@@ -298,6 +321,30 @@ document.getElementById('send').onclick = () => {
   document.getElementById('thanks').textContent = choice === 'yes'
     ? 'Thank you, ' + name + '!'
     : 'Thank you for your blessings, ' + name;
+  shower(30);
+};
+
+const wnm = document.getElementById('wnm'), wmsg = document.getElementById('wmsg'),
+      werr = document.getElementById('werr');
+wnm.oninput = wmsg.oninput = () => werr.textContent = '';
+document.getElementById('wsend').onclick = () => {
+  const name = wnm.value.trim(), message = wmsg.value.trim();
+  if (!name) { werr.textContent = 'Enter your name first'; return; }
+  if (!message) { werr.textContent = 'Write a few words for the couple'; return; }
+
+  fetch(SHEET_URL, {
+    method: 'POST', mode: 'no-cors', keepalive: true,
+    body: new URLSearchParams({ type: 'wish', name, message })
+  }).catch(() => {});
+
+  const wtext = `Dear Aiswarya & Sreeraj 💐\n\n${message}\n\n— ${name}`;
+  document.getElementById('ww1').href = 'https://wa.me/' + RSVP_NUMBERS[0] + '?text=' + encodeURIComponent(wtext);
+  document.getElementById('ww2').href = 'https://wa.me/' + RSVP_NUMBERS[1] + '?text=' + encodeURIComponent(wtext);
+
+  document.getElementById('wtxt').textContent = '“' + message + '”';
+  document.getElementById('wby').textContent = '— ' + name;
+  document.getElementById('wform').style.display = 'none';
+  document.getElementById('wdone').style.display = 'block';
   shower(30);
 };
 </script>
