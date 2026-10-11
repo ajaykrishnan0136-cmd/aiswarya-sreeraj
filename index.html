@@ -7,25 +7,24 @@
 <meta property="og:title" content="Aiswarya & Sreeraj · 20 November 2026">
 <meta property="og:description" content="You're invited to our wedding at Staydium Bungalow Resort, Kozhikode">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Malayalam:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Malayalam:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--mar:#5B0F1A;--mard:#3E0A12;--gold:#C9A24B;--gold2:#E9C46A;--gold3:#F3E1A8;--cream:#FBF5E6;--ivory:#FFFCF3;--ink:#2E1A12;--txt:#4A3B2E;--leaf:#2F6B2F;--dk:#8A6A1F}
 body{margin:0;background:#EADFC6;padding:12px}
 .w{max-width:480px;margin:0 auto;background:var(--cream);border-radius:18px;color:var(--ink);font-family:'Cormorant Garamond',serif;text-align:center;overflow:hidden;border:2px solid var(--gold)}
 .hero{position:relative;background:var(--mard);padding:0 1rem 2.2rem;padding-top:62%;overflow:hidden;border-bottom:6px double var(--gold)}
 .bg{position:absolute;top:0;left:0;width:100%;aspect-ratio:2/3;background:url('couple.jpg') center top/cover no-repeat;transform-origin:50% 30%;animation:zoom 20s ease-in-out infinite alternate}
-.bg:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(62,10,18,.3) 0%,rgba(62,10,18,0) 15%,rgba(62,10,18,0) 40%,rgba(62,10,18,.65) 56%,rgba(62,10,18,.92) 72%,var(--mard) 100%)}
+.bg:after{content:'';position:absolute;inset:-2px;background:linear-gradient(180deg,rgba(62,10,18,.3) 0%,rgba(62,10,18,0) 12%,rgba(62,10,18,0) 40%,rgba(62,10,18,.65) 56%,rgba(62,10,18,.92) 70%,var(--mard) 85%,var(--mard) 100%)}
 @keyframes zoom{to{transform:scale(1.05)}}
 .hero p{text-shadow:0 1px 8px rgba(0,0,0,.65)}
 .hero .nm{text-shadow:none;filter:drop-shadow(0 2px 6px rgba(0,0,0,.7))}
-.toran{position:absolute;top:0;left:0;right:0;height:24px;display:flex;justify-content:space-around;border-top:3px solid var(--gold);z-index:2}
-.toran span{width:13px;height:24px;background:var(--leaf);border-radius:50%/25% 25% 75% 75%;transform-origin:top center;animation:sway 3s ease-in-out infinite alternate}
-.gars{position:absolute;top:4px;left:0;right:0;display:flex;justify-content:space-around;padding:0 10px;z-index:1}
+.toran{position:absolute;top:0;left:0;right:0;height:12px;z-index:2;border-top:3px solid var(--gold);background:radial-gradient(circle at 50% 2px,var(--gold2) 3px,transparent 3.6px) 0 0/18px 12px}
+.gars{position:absolute;top:6px;left:0;right:0;display:flex;justify-content:space-around;padding:0 10px;z-index:1}
 .gar{display:flex;flex-direction:column;align-items:center;transform-origin:top center;animation:sway 3.6s ease-in-out infinite alternate}
 .gar i{display:block;width:8px;height:8px;border-radius:50%;background:#FFFDF5;margin-top:1px}
 .gar i.o{background:#F28C28}.gar i.r{background:#C2185B;width:10px;height:10px}
 @keyframes sway{from{transform:rotate(-4deg)}to{transform:rotate(4deg)}}
-.ml{font-family:'Noto Serif Malayalam',serif;color:var(--gold2);font-size:20px;margin:0 0 6px}
+.ml{font-family:'Noto Serif Malayalam',serif;font-weight:800;color:var(--gold2);font-size:28px;margin:0 0 6px;letter-spacing:.02em}
 .scr{font-family:'Great Vibes',cursive;color:var(--gold2);font-weight:400}
 .nm{font-family:'Pinyon Script',cursive;font-weight:400;background:linear-gradient(180deg,#FBEBB5 0%,#E9C46A 50%,#C9A24B 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .2em}
 .cap{font-family:var(--sans);font-size:11px;letter-spacing:.32em;color:var(--gold);margin:0;text-transform:uppercase}
@@ -93,11 +92,11 @@ textarea{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);b
 <div class="w">
   <div class="hero" id="hero">
     <div class="bg"></div>
-    <div class="toran" id="toran"></div>
+    <div class="toran"></div>
     <div class="gars" id="gars"></div>
     <div style="position:relative;z-index:3">
       <p class="ml">ശുഭവിവാഹം</p>
-      <p class="cap">Shubha vivaham</p>
+      <p class="cap" style="color:var(--gold2);font-weight:600">Shubha vivaham</p>
       <div style="margin:18px 0 10px"><div class="seal" id="seal">A&amp;S</div></div>
       <p id="hint" class="cap" style="letter-spacing:.2em;margin-bottom:20px">Tap the seal</p>
       <p style="font-style:italic;color:#E3CC8F;font-size:17px;margin:0">Together with their families</p>
@@ -246,9 +245,6 @@ function tick() {
   sEl.textContent = pad(Math.floor(x / 1e3) % 60);
 }
 tick(); setInterval(tick, 1000);
-
-const toran = document.getElementById('toran');
-for (let i = 0; i < 18; i++) { const l = document.createElement('span'); l.style.animationDelay = (i * 0.17) + 's'; toran.appendChild(l); }
 
 const gars = document.getElementById('gars');
 for (let i = 0; i < 7; i++) {
