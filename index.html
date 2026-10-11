@@ -13,8 +13,11 @@
 body{margin:0;background:#EADFC6;padding:12px}
 .w{max-width:480px;margin:0 auto;background:var(--cream);border-radius:18px;color:var(--ink);font-family:'Cormorant Garamond',serif;text-align:center;overflow:hidden;border:2px solid var(--gold)}
 .hero{position:relative;background:var(--mard);padding:6.2rem 1rem 2.2rem;overflow:hidden;border-bottom:6px double var(--gold)}
-.mand{position:absolute;left:50%;top:55%;width:520px;height:520px;margin:-260px 0 0 -260px;opacity:.2;animation:spin 90s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
+.bg{position:absolute;inset:0;background:url('couple.jpg') center 15%/cover no-repeat;animation:zoom 20s ease-in-out infinite alternate}
+.bg:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(62,10,18,.45) 0%,rgba(62,10,18,.35) 30%,rgba(62,10,18,.75) 62%,rgba(62,10,18,.95) 100%)}
+@keyframes zoom{to{transform:scale(1.08)}}
+.hero p{text-shadow:0 1px 8px rgba(0,0,0,.65)}
+.hero .nm{text-shadow:none;filter:drop-shadow(0 2px 6px rgba(0,0,0,.7))}
 .toran{position:absolute;top:0;left:0;right:0;height:24px;display:flex;justify-content:space-around;border-top:3px solid var(--gold);z-index:2}
 .toran span{width:13px;height:24px;background:var(--leaf);border-radius:50%/25% 25% 75% 75%;transform-origin:top center;animation:sway 3s ease-in-out infinite alternate}
 .gars{position:absolute;top:4px;left:0;right:0;display:flex;justify-content:space-around;padding:0 10px;z-index:1}
@@ -89,7 +92,7 @@ textarea{background:var(--ivory);color:var(--ink);border:1px solid var(--gold);b
 <body>
 <div class="w">
   <div class="hero" id="hero">
-    <svg class="mand" viewBox="-100 -100 200 200"><g id="mg" fill="none" stroke="#E9C46A" stroke-width=".6"><circle r="96"/><circle r="88"/><circle r="40"/><circle r="22"/></g></svg>
+    <div class="bg"></div>
     <div class="toran" id="toran"></div>
     <div class="gars" id="gars"></div>
     <div style="position:relative;z-index:3">
@@ -243,11 +246,6 @@ function tick() {
   sEl.textContent = pad(Math.floor(x / 1e3) % 60);
 }
 tick(); setInterval(tick, 1000);
-
-const mg = document.getElementById('mg'), NS = 'http://www.w3.org/2000/svg';
-for (let i = 0; i < 24; i++) { const p = document.createElementNS(NS,'path'); p.setAttribute('d','M0,-42 C10,-60 10,-76 0,-86 C-10,-76 -10,-60 0,-42Z'); p.setAttribute('transform','rotate('+i*15+')'); mg.appendChild(p); }
-for (let i = 0; i < 12; i++) { const p = document.createElementNS(NS,'path'); p.setAttribute('d','M0,-22 C7,-30 7,-36 0,-40 C-7,-36 -7,-30 0,-22Z'); p.setAttribute('transform','rotate('+i*30+')'); mg.appendChild(p); }
-for (let i = 0; i < 48; i++) { const c = document.createElementNS(NS,'circle'); c.setAttribute('r','1.6'); c.setAttribute('cx',Math.sin(i*Math.PI/24)*92); c.setAttribute('cy',Math.cos(i*Math.PI/24)*92); mg.appendChild(c); }
 
 const toran = document.getElementById('toran');
 for (let i = 0; i < 18; i++) { const l = document.createElement('span'); l.style.animationDelay = (i * 0.17) + 's'; toran.appendChild(l); }
